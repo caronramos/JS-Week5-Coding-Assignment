@@ -1,3 +1,4 @@
+
 class WorshipPracticeAttendance {
   constructor(player, instrument) {
     this.player = player;
@@ -37,4 +38,38 @@ class Menu {
   
   start() {
     let selection = this.showMainMenuOptions();
+    while (selection != 0) {
+      switch (selection) {
+        case '1':
+          this.createSubTeam();
+          break;
+        case '2':
+          this.viewSubTeam();
+          break;
+        case '3':
+          this.deleteSubTeam();
+          break;
+        case '4':
+          this.displaySubTeams();
+          break;
+        default:
+          seletion = 0;
+      }
+      selection = this.showMainMenuOptions();    
+    }
+    
+    alert('Farewell!');
   }
+  
+  showMainMenuOptions() {
+    return prompt('
+                  0) Exit
+                  1) Create New Sub Team
+                  2) View Sub Team
+                  3) Delete Sub Team
+                  4) Display All Sub Teams
+      );
+  }
+  
+  showSubTeamMenuOptions
+}
