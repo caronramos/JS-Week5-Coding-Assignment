@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@caronramos 
-honeyroanne
-/
-week-5-coding-assignment
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-week-5-coding-assignment/Week 5 Coding Assignment.js /
-@honeyroanne
-honeyroanne week 5 coding assignment
-Latest commit 99e6cc3 2 days ago
- History
- 1 contributor
-140 lines (122 sloc)  3.63 KB
-   
 //Menu App
 class musician {
     constructor(name, instrument){
