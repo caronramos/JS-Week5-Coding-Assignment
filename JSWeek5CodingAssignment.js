@@ -71,5 +71,21 @@ class Menu {
       );
   }
   
-  showSubTeamMenuOptions
+  displaySubTeams() {
+    let subteamString = '';
+    for (let i=0; i<this.teams.length, i++) {
+      subteamString += i + ')' + this.teams[i].player + '\n';
+    }
+    alert(subteamString);
+  }
+  
+  createSubTeam() {
+    let player = prompt('Enter player for new Sub Team: ');
+    this.teams.push(new Team(player));
+  }
+  
+  viewSubTeam() {
+    
+  }
 }
+
