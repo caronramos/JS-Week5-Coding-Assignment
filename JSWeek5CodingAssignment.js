@@ -80,14 +80,6 @@ class Menu {
      `);  
   }
   
-  displaySubTeam() {
-    let subteamString = '';
-    for (let i=0; i<this.subteams.length; i++) {
-      subteamString += i + ') ' + this.subteams[i].player + '\n';
-    }
-    alert(subteamString);
-  }
-  
   createSubTeam() {
     let player = prompt('Enter player for new sub team: ');
     this.subteams.push(new subteam(player));
@@ -115,6 +107,14 @@ class Menu {
       }
   }
 }
+  
+displaySubTeam() {
+    let subteamString = '';
+    for (let i=0; i<this.subteams.length; i++) {
+      subteamString += i + ') ' + this.subteams[i].player + '\n';
+    }
+    alert(subteamString);
+  }
 
 createPlayer() {
   let player = prompt('Enter name for new player: ');
