@@ -52,7 +52,7 @@ class Menu {
           this.displaySubTeams();
           break;
         default:
-          seletion = 0;
+          selection = 0;
       }
       selection = this.showMainMenuOptions();    
     }
