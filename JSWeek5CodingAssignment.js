@@ -118,5 +118,9 @@ class Menu {
 }
 
 createPlayer() {
-  
+  let player = prompt('Enter name for new player: ');
+  let instrument = prompt('Enter instrument for new player: ');
+  this.selectedSubTeam.names.push(new name(player, instrument));
 }
+  
+
