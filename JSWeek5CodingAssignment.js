@@ -49,7 +49,7 @@ class Menu {
           this.deleteSubTeam();
           break;
         case '4':
-          this.displaySubTeams();
+          this.displaySubTeam();
           break;
         default:
           selection = 0;
@@ -80,12 +80,13 @@ class Menu {
      `);  
   }
   
-  displaySubTeams() {
+  displaySubTeam() {
     let subteamString = '';
     for (let i=0; i<this.subteams.length, i++) {
       subteamString += i + ') ' + this.subteams[i].player + '\n';
     }
     alert(subteamString);
+  }
   
   createSubTeam() {
     let player = prompt('Enter player for new sub team: ');
