@@ -81,8 +81,8 @@ class Menu {
   }
   
   createSubTeam() {
-    let player = prompt('Enter player for new sub team: ');
-    this.subteams.push(new subteam(player));
+    let name = prompt('Enter name for new sub team: ');
+    this.subteams.push(new subteam(name));
   }
   
   viewSubTeam() {
