@@ -82,7 +82,7 @@ class Menu {
   
   displaySubTeam() {
     let subteamString = '';
-    for (let i=0; i<this.subteams.length, i++) {
+    for (let i=0; i<this.subteams.length; i++) {
       subteamString += i + ') ' + this.subteams[i].player + '\n';
     }
     alert(subteamString);
