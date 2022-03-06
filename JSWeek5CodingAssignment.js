@@ -1,39 +1,39 @@
 
 class WorshipPractice {
-  constructor(player, instrument) {
+  constructor(player, instrument){
     this.player = player;
     this.instrument = instrument;
   }
   
   describe() {
-    return ${this.player} plays ${this.instrument}.;
-    
+    return `${this.player} plays ${this.instrument}.`;
   }
 }
 
 class WorshipTeam {
   constructor(player) {
     this.player = player;
-    this.name = [];
+    this.names = [];
   }
 }
 
 addName(name) {
-  if (name instanceof Name) {
+  if (name instanceof name) {
     this.names.push(name);
   } else {
-    throw new Error('You can only add an instance of Name. Argument is not a worship player: ${name}');
+    throw new Error('You can only add an instance of name. Argument is not a worship player: ' ${name});
   }
-  
+}
+
   describe() {
-    return ${this.player} has ${this.name.length} players.;
+    return `${this.players} has ${this.name.length} players.`;
   }
 }
 
 class Menu {
   constructor() {
-    this.teams = [];
-    this.selectedTeam = null;
+    this.subteams = [];
+    this.selectedSubTeam = null;
   }
   
   start() {
@@ -62,13 +62,13 @@ class Menu {
   }
   
   showMainMenuOptions() {
-    return prompt('
+    return prompt(`
                   0) Exit
                   1) Create New Sub Team
                   2) View Sub Team
                   3) Delete Sub Team
                   4) Display All Sub Teams
-      ');
+      `);
   }
   
   class WorshipPracticeAttendance {
@@ -82,35 +82,7 @@ class Menu {
     
   }
 }
-
-class WorshipTeam {
-  constructor(player) {
-    this.player = player;
-    this.names = [];
-  }
-}
-
-addName(name) {
-  if (name instanceof Name) {
-    this.names.push(name);
-  } else {
-    throw new Error('You can only add an instance of Name. Argument is not a worship player: ${name}');
-  }
   
-  describe() {
-    return ${this.player} has ${this.names.length} players.;
-  }
-}
-
-class Menu {
-  constructor() {
-    this.teams = [];
-    this.selectedTeam = null;
-  }
-  
-  start() {
-    let selection = this.showMainMenuOptions();
-  }  
   displaySubTeams() {
     let subteamString = '';
     for (let i=0; i<this.teams.length, i++) {
