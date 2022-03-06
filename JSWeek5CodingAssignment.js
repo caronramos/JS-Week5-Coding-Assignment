@@ -71,6 +71,15 @@ class Menu {
       `);
   }
 
+  showSubTeamMenuOptions(subteamInfo) {
+      return prompt (`
+        0) Back
+        1) Create Player
+        2) Delete Player
+        ---------------------
+        ${subteamInfo}
+     `);  
+  }
   
   displaySubTeams() {
     let subteamString = '';
