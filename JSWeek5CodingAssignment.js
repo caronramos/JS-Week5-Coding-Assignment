@@ -86,7 +86,6 @@ class Menu {
       subteamString += i + ') ' + this.subteams[i].player + '\n';
     }
     alert(subteamString);
-  }
   
   createSubTeam() {
     let player = prompt('Enter player for new sub team: ');
