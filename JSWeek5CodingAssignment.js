@@ -20,12 +20,12 @@ addName(player) {
   if (player instanceof player) {
     this.names.push(player);
   } else {
-    throw new Error('You can only add an instance of name. Argument is not a worship player: ' ${player});
+    throw new Error(`You can only add an instance of name. Argument is not a worship player; ${player}`);
   }
 }
 
   describe() {
-    return `${this.players} has ${this.name.length} players.`;
+    return `${this.players} has ${this.players.length} players.`;
   }
 }
 
