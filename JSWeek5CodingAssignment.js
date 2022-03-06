@@ -14,7 +14,7 @@ class WorshipPractice {
 class WorshipTeam {
   constructor(player) {
     this.player = player;
-    this.names = [];
+    this.name = [];
   }
 }
 
@@ -26,7 +26,7 @@ addName(name) {
   }
   
   describe() {
-    return ${this.player} has ${this.names.length} players.;
+    return ${this.player} has ${this.name.length} players.;
   }
 }
 
@@ -68,7 +68,7 @@ class Menu {
                   2) View Sub Team
                   3) Delete Sub Team
                   4) Display All Sub Teams
-      );
+      ');
   }
   
   class WorshipPracticeAttendance {
