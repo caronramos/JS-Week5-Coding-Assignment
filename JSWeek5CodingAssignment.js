@@ -1,5 +1,5 @@
 
-class WorshipPracticeAttendance {
+class WorshipPractice {
   constructor(player, instrument) {
     this.player = player;
     this.instrument = instrument;
@@ -85,7 +85,9 @@ class Menu {
   }
   
   viewSubTeam() {
-    
+    let choice = prompt('Enter the choice of sub team you want to view: ');
+    if (choice > -1 && choice < this.teams.length) {
+      
+    }
   }
 }
-
