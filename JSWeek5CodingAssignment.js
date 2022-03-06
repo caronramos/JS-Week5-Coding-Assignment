@@ -13,15 +13,14 @@ class WorshipPractice {
 class WorshipTeam {
   constructor(player) {
     this.player = player;
-    this.names = [];
+    this.players = [];
   }
-}
 
-addName(name) {
-  if (name instanceof name) {
-    this.names.push(name);
+addName(player) {
+  if (player instanceof player) {
+    this.names.push(player);
   } else {
-    throw new Error('You can only add an instance of name. Argument is not a worship player: ' ${name});
+    throw new Error('You can only add an instance of name. Argument is not a worship player: ' ${player});
   }
 }
 
