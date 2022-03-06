@@ -123,4 +123,14 @@ createPlayer() {
   this.selectedSubTeam.names.push(new name(player, instrument));
 }
   
+ deletePlayer() {
+        let choice = prompt('Enter your choice of playerthat you want to delete:');
+        if(choice>-1 && choice< this.selectedSubTeam.names.length) {
+            this.selectedSubTeam.names.splice(choice, 1);
+        }
+    }
+}
+
+let menu = new Menu();
+menu.start();
 
