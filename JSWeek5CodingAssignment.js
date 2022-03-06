@@ -71,6 +71,46 @@ class Menu {
       );
   }
   
+  class WorshipPracticeAttendance {
+  constructor(player, instrument) {
+    this.player = player;
+    this.instrument = instrument;
+  }
+  
+  describe() {
+    return ${this.player} plays ${this.instrument}.;
+    
+  }
+}
+
+class WorshipTeam {
+  constructor(player) {
+    this.player = player;
+    this.names = [];
+  }
+}
+
+addName(name) {
+  if (name instanceof Name) {
+    this.names.push(name);
+  } else {
+    throw new Error('You can only add an instance of Name. Argument is not a worship player: ${name}');
+  }
+  
+  describe() {
+    return ${this.player} has ${this.names.length} players.;
+  }
+}
+
+class Menu {
+  constructor() {
+    this.teams = [];
+    this.selectedTeam = null;
+  }
+  
+  start() {
+    let selection = this.showMainMenuOptions();
+  }  
   displaySubTeams() {
     let subteamString = '';
     for (let i=0; i<this.teams.length, i++) {
@@ -87,7 +127,17 @@ class Menu {
   viewSubTeam() {
     let choice = prompt('Enter the choice of sub team you want to view: ');
     if (choice > -1 && choice < this.teams.length) {
+      this.selectedSubTeam = this.teams[choice];
+      let subteamName = 'Sub Team Name: ' + this.selectedSubTeam.player + '\n';
       
+      for (let i=0; i<this.selectedSubTeam.names.length; i++) {
+        subteamName += i + ')' + this.selectedSubTeam.names[i].player
+        + '-' + this.selectedSubTeam.names[i].instrument + '\n';
     }
+      
+      let option = this.ShowTeamMenuOptions(choice);
+      switch (selection) {
+          case
+      }
   }
 }
