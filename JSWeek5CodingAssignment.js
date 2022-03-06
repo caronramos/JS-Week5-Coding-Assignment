@@ -83,21 +83,21 @@ class Menu {
   
   displaySubTeams() {
     let subteamString = '';
-    for (let i=0; i<this.teams.length, i++) {
-      subteamString += i + ')' + this.teams[i].player + '\n';
+    for (let i=0; i<this.subteams.length, i++) {
+      subteamString += i + ') ' + this.subteams[i].player + '\n';
     }
     alert(subteamString);
   }
   
   createSubTeam() {
-    let player = prompt('Enter player for new Sub Team: ');
-    this.teams.push(new Team(player));
+    let player = prompt('Enter player for new sub team: ');
+    this.subteams.push(new subteam(player));
   }
   
   viewSubTeam() {
     let choice = prompt('Enter the choice of sub team you want to view: ');
-    if (choice > -1 && choice < this.teams.length) {
-      this.selectedSubTeam = this.teams[choice];
+    if (choice>-1 && choice < this.subteams.length) {
+      this.selectedSubTeam = this.subteams[choice];
       let subteamName = 'Sub Team Name: ' + this.selectedSubTeam.player + '\n';
       
       for (let i=0; i<this.selectedSubTeam.names.length; i++) {
@@ -105,9 +105,18 @@ class Menu {
         + '-' + this.selectedSubTeam.names[i].instrument + '\n';
     }
       
-      let option = this.ShowTeamMenuOptions(choice);
+      let option = this.ShowTeamMenuOptions(subteamName);
       switch (selection) {
-          case
+        case '1':
+          this.createPlayer();
+          break;
+        case '2':
+          this.deletePlayer();
+          break;
       }
   }
+}
+
+createPlayer() {
+  
 }
