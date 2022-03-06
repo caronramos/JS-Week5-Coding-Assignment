@@ -16,16 +16,16 @@ class WorshipTeam {
     this.players = [];
   }
 
-addName(player) {
-  if (player instanceof player) {
-    this.names.push(player);
+addName(WorshipPractice) {
+  if (WorshipPractice instanceof WorshipPractice) {
+    this.WorshipPractice.push(WorshipPractice);
   } else {
-    throw new Error(`You can only add an instance of name. Argument is not a worship player; ${player}`);
+    throw new Error(`You can only add an instance of name. Argument is not a worship player; ${WorshipPractice}`);
   }
 }
 
   describe() {
-    return `${this.players} has ${this.players.length} players.`;
+    return `${this.players} has ${this.WorshipPractice.length} players.`;
   }
 }
 
@@ -82,18 +82,18 @@ class Menu {
   
   createSubTeam() {
     let name = prompt('Enter name for new sub team: ');
-    this.subteams.push(new subteam(name));
+    this.WorshipTeam.push(new subteam(name));
   }
   
   viewSubTeam() {
     let choice = prompt('Enter the choice of sub team you want to view: ');
-    if (choice>-1 && choice < this.subteams.length) {
-      this.selectedSubTeam = this.subteams[choice];
-      let subteamName = 'Sub Team Name: ' + this.selectedSubTeam.player + '\n';
+    if (choice>-1 && choice < this.WorshipTeams.length) {
+      this.selectedSubTeam = this.WorshipTeams[choice];
+      let subteamName = 'Sub Team Name: ' + this.selectedSubTeam.name + '\n';
       
-      for (let i=0; i<this.selectedSubTeam.names.length; i++) {
-        subteamName += i + ')' + this.selectedSubTeam.names[i].player
-        + '-' + this.selectedSubTeam.names[i].instrument + '\n';
+      for (let i=0; i<this.selectedSubTeam.name.length; i++) {
+        subteamName += i + ')' + this.selectedSubTeam.name[i].player
+        + '-' + this.selectedSubTeam.WorshipPractice[i].instrument + '\n';
     }
       
       let option = this.ShowTeamMenuOptions(subteamName);
@@ -108,27 +108,27 @@ class Menu {
   }
 }
   
-displaySubTeam() {
+  displaySubTeam() {
     let subteamString = '';
-    for (let i=0; i<this.subteams.length; i++) {
-      subteamString += i + ') ' + this.subteams[i].player + '\n';
+    for (let i=0; i<this.players.length; i++) {
+      subteamString += i + ') ' + this.players[i].name + '\n';
     }
     alert(subteamString);
   }
 
-createPlayer() {
-  let player = prompt('Enter name for new player: ');
-  let instrument = prompt('Enter instrument for new player: ');
-  this.selectedSubTeam.names.push(new name(player, instrument));
-}
-  
- deletePlayer() {
-        let choice = prompt('Enter your choice of playerthat you want to delete:');
-        if(choice>-1 && choice< this.selectedSubTeam.names.length) {
-            this.selectedSubTeam.names.splice(choice, 1);
+    createPlayer() {
+      let player = prompt('Enter name for new player: ');
+      let instrument = prompt('Enter instrument for new player: ');
+      this.players.push(new WorshipTeam(player, instrument));
+    }
+
+     deletePlayer() {
+            let choice = prompt('Enter your choice of playerthat you want to delete:');
+            if(choice>-1 && choice< this.selectedSubTeam.names.length) {
+                this.selectedSubTeam.names.splice(choice, 1);
+            }
         }
     }
-}
 
 let menu = new Menu();
 menu.start();
