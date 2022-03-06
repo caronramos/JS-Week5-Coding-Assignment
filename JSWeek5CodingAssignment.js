@@ -70,18 +70,7 @@ class Menu {
                   4) Display All Sub Teams
       `);
   }
-  
-  class WorshipPracticeAttendance {
-  constructor(player, instrument) {
-    this.player = player;
-    this.instrument = instrument;
-  }
-  
-  describe() {
-    return ${this.player} plays ${this.instrument}.;
-    
-  }
-}
+
   
   displaySubTeams() {
     let subteamString = '';
