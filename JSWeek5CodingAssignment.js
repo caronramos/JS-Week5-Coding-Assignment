@@ -124,13 +124,13 @@ class Menu {
     createPlayer() {
       let player = prompt('Enter name for new player: ');
       let instrument = prompt('Enter instrument for new player: ');
-      this.selectedSubTeam.players.push(new WorshipPractice(player, instrument));
+      this.selectedSubTeam.subteams.push(new WorshipTeam(player, instrument));
     }
 
      deletePlayer() {
        let choice = prompt('Enter your choice of player that you want to delete: ');
-       if(choice>-1 && choice<this.selectedSubTeam.players.length) {
-       this.selectedSubTeam.players.splice(choice, 1);
+       if(choice>-1 && choice<this.selectedSubTeam.subteams.length) {
+       this.selectedSubTeam.subteams.splice(choice, 1);
     }
   }
 }
