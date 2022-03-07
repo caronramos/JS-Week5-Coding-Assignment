@@ -107,7 +107,7 @@ class Menu {
   }
   
   deleteSubTeam() {
-    let choice = prompt('Enter the choice of sub team that you wan to delete: ');
+    let choice = prompt('Enter the choice of sub team that you want to delete: ');
     if (choice>-1 && choice<this.subteams.length) {
       this.subteams.splice(choice, 1);
     }
