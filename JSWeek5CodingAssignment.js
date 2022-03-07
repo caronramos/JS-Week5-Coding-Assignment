@@ -25,7 +25,7 @@ addName(WorshipPractice) {
 }
 
   describe() {
-    return `${this.players} has ${this.WorshipPractice.length} players.`;
+    return `${this.names} has ${this.WorshipPractice.length} players.`;
   }
 }
 
@@ -88,10 +88,10 @@ class Menu {
     let choice = prompt('Enter the choice of sub team you want to view: ');
     if (choice>-1 && choice<this.subteams.length) {
       this.selectedSubTeam = this.subteams[choice];
-      let subteamName = 'Sub Team Name: ' + this.selectedSubTeam.player + '\n';
+      let subTeamName = 'Sub Team Name: ' + this.selectedSubTeam.subteam + '\n';
       
       for (let i=0; i<this.selectedSubTeam.name.length; i++) {
-        subteamName += i + ')' + this.selectedSubTeam.players[i].player
+        subTeamName += i + ')' + this.selectedSubTeam.players[i].subteam
         + '-' + this.selectedSubTeam.players[i].instrument + '\n';
     }
       
@@ -109,15 +109,15 @@ class Menu {
   
   deleteSubTeam() {
     let choice = prompt('Enter the choice of sub team that you wan to delete: ');
-    if (choice>-1 && choice<this.players.length) {
-      this.players.splice(choice, 1);
+    if (choice>-1 && choice<this.subteams.length) {
+      this.subteams.splice(choice, 1);
     }
   }
   
   displaySubTeam() {
     let subteamString = '';
-    for (let i=0; i<this.players.length; i++) {
-      subteamString += i + ') ' + this.players[i].player + '\n';
+    for (let i=0; i<this.subteams.length; i++) {
+      subteamString += i + ') ' + this.subteams[i].player + '\n';
     }
     alert(subteamString);
   }
