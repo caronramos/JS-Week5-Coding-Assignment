@@ -11,9 +11,9 @@ class WorshipPractice {
 }
 
 class WorshipTeam {
-  constructor(player) {
-    this.player = player;
-    this.players = [];
+  constructor(subteam) {
+    this.subteam = subteam;
+    this.subteams = [];
   }
 
 addName(WorshipPractice) {
@@ -79,14 +79,6 @@ class Menu {
      `);  
   }
   
-  displaySubTeam() {
-    let subteamString = '';
-    for (let i=0; i<this.subteams.length; i++) {
-      subteamString += i + ') ' + this.subteams[i].player + '\n';
-    }
-    alert(subteamString);
-  }
-  
   createSubTeam() {
     let subteam = prompt('Enter name for new sub team: ');
     this.subteams.push(new WorshipTeam(subteam));
@@ -119,6 +111,14 @@ class Menu {
     if (choice>-1 && choice<this.subteams.length) {
       this.subteams.splice(choice, 1);
     }
+  }
+  
+  displaySubTeam() {
+    let subteamString = '';
+    for (let i=0; i<this.subteams.length; i++) {
+      subteamString += i + ') ' + this.subteams[i].player + '\n';
+    }
+    alert(subteamString);
   }
 
     createPlayer() {
