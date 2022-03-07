@@ -69,13 +69,13 @@ class Menu {
       `);
   }
 
-  showSubTeamMenuOptions(subteamInfo) {
+  showSubTeamMenuOptions(subTeamInfo) {
       return prompt (`
         0) Back
         1) Create Player
         2) Delete Player
         ---------------------
-        ${subteamInfo}
+        ${subTeamInfo}
      `);  
   }
   
@@ -91,8 +91,8 @@ class Menu {
       let subTeamName = 'Sub Team Name: ' + this.selectedSubTeam.subteam + '\n';
       
       for (let i=0; i<this.selectedSubTeam.subteams.length; i++) {
-        subTeamName += i + ')' + this.selectedSubTeam.subteams[i].subteam
-        + '-' + this.selectedSubTeam.subteams[i].instrument + '\n';
+        subTeamName += i + ') ' + this.selectedSubTeam.subteams[i].player
+        + ' - ' + this.selectedSubTeam.subteams[i].instrument + '\n';
     }
       
       let selection = this.showSubTeamMenuOptions(subTeamName);
@@ -114,17 +114,17 @@ class Menu {
   }
   
   displaySubTeam() {
-    let subteamString = '';
+    let subTeamString = '';
     for (let i=0; i<this.subteams.length; i++) {
-      subteamString += i + ') ' + this.subteams[i].player + '\n';
+      subTeamString += i + ') ' + this.subteams[i].subteam + '\n';
     }
-    alert(subteamString);
+    alert(subTeamString);
   }
 
     createPlayer() {
       let player = prompt('Enter name for new player: ');
       let instrument = prompt('Enter instrument for new player: ');
-      this.selectedSubTeam.subteams.push(new WorshipTeam(player, instrument));
+      this.selectedSubTeam.subteams.push(new WorshipPractice(player, instrument));
     }
 
      deletePlayer() {
