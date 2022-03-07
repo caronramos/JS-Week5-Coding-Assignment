@@ -90,7 +90,7 @@ class Menu {
       this.selectedSubTeam = this.subteams[choice];
       let subTeamName = 'Sub Team Name: ' + this.selectedSubTeam.subteam + '\n';
       
-      for (let i=0; i<this.selectedSubTeam.name.length; i++) {
+      for (let i=0; i<this.selectedSubTeam.players.length; i++) {
         subTeamName += i + ')' + this.selectedSubTeam.players[i].subteam
         + '-' + this.selectedSubTeam.players[i].instrument + '\n';
     }
