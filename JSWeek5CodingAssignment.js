@@ -95,7 +95,7 @@ class Menu {
         + '-' + this.selectedSubTeam.players[i].instrument + '\n';
     }
       
-      let option = this.ShowTeamMenuOptions(subteamName);
+      let selection = this.ShowTeamMenuOptions(subteamName);
       switch (selection) {
         case '1':
           this.createPlayer();
